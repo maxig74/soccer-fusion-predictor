@@ -1,4 +1,5 @@
 # Framework FUSION: Modellistica Stocastica e Predizione di Eventi ⚽📊
+<img width="1920" height="1032" alt="{492ABFB2-3F38-49FE-8E67-F9FA75D92ED6}" src="https://github.com/user-attachments/assets/8ec41271-2663-47bd-8537-873ea4db687a" />
 
 Un framework econometrico e software desktop integrato per la previsione di eventi discreti e il calcolo probabilistico nei sistemi competitivi bivariati. Il progetto si basa interamente sul mio impianto metodologico e di ricerca accademica: *"Modelli probabilistici integrati per la previsione di eventi discreti: Poisson, regressione bayesiana, correzioni Dixon-Coles e indicatori dinamici in un framework FUSION"*.
 
@@ -55,4 +56,5 @@ L'applicazione (sviluppata in VB6 con Windows API native) agisce come motore di 
 - **UI Dinamica Interamente Custom:** Tabelle e controlli `ListView` vengono gestiti bypassando i limiti di refresh di Windows; l'intero layout è responsive e calcola l'auto-scaling delle proporzioni dei font e delle griglie geometriche in tempo reale durante il resize della finestra.
 
 ---
-*Sviluppato da Massimiliano Ganzaroli*
+*Sviluppato da Massimiliano G.*<img width="1920" height="1032" alt="{492ABFB2-3F38-49FE-8E67-F9FA75D92ED6}" src="https://github.com/user-attachments/assets/a2c514aa-53ca-4f5f-9e36-32c56559507f" />
+
