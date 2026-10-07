@@ -1,6 +1,4 @@
 # Framework FUSION: Modellistica Stocastica e Predizione di Eventi ⚽📊
-<img width="1920" height="1032" alt="{492ABFB2-3F38-49FE-8E67-F9FA75D92ED6}" src="https://github.com/user-attachments/assets/6c9d7492-2f5a-4373-a852-dfe35158ccc0" />
-
 
 Un framework econometrico e software desktop integrato per la previsione di eventi discreti e il calcolo probabilistico nei sistemi competitivi bivariati. Il progetto si basa interamente sul mio impianto metodologico e di ricerca accademica: *"Modelli probabilistici integrati per la previsione di eventi discreti: Poisson, regressione bayesiana, correzioni Dixon-Coles e indicatori dinamici in un framework FUSION"*.
 
@@ -30,25 +28,31 @@ Il modello supera i limiti della letteratura statistica classica strutturando il
 ## 📈 Formule Matematiche Chiave Implementate nel Software
 
 ### Stabilizzazione Bayesiana dell'Intensità (\(\lambda_{finale}\))
+
 \[\lambda_{finale} = \frac{N}{N + N_0}\lambda_{ultra} + \frac{N_0}{N + N_0}\mu\]
+
 *Garantisce la robustezza del software anche nelle prime giornate di campionato (basso campionamento).*
 
 ### Correzione Dixon-Coles per Dipendenze Locali
+
 \[P'(g_C, g_O) = P(g_C, g_O) \cdot [1 + \rho \cdot DC(g_C, g_O)]\]
-\[DC(g_C, g_O) = \begin{cases} -1 & \text{se } (g_C, g_O) \in \{(0,0), (1,1)\} \\ +1 & \text{se } (g_C, g_O) \in \{(0,1), (1,0)\} \\ 0 & \text{altrimenti} \end{cases}\end{cases}\]
+
+\[DC(g_C, g_O) = \begin{cases} -1 & \text{se } (g_C, g_O) \in \{(0,0), (1,1)\} \\ +1 & \text{se } (g_C, g_O) \in \{(0,1), (1,0)\} \\ 0 & \text{altrimenti} \end{cases}\]
 
 ### Indicatori Avanzati di Struttura della Previsione
-- **Sorpresa (\(S\)):** Misura quanto la moda (il punteggio esatto atteso) è debole rispetto alla distribuzione complessiva: \(S = 1 - \tilde{P}(g_c^*, g_o^*)\).
-- **Coerenza (\(C\)):** Distanza tra la cella dominante e la seconda migliore: \(C = \tilde{P}(g_c^*, g_o^*) - \max_{altri}\tilde{P}(g_c, g_o)\).
+- **Sorpresa (\(S\)):** Misura quanto la moda (il punteggio esatto atteso) è debole rispetto alla distributione complessiva: 
+\[S = 1 - \tilde{P}(g_c^*, g_o^*)\]
+- **Coerenza (\(C\)):** Distanza tra la cella dominante e la seconda migliore: 
+\[C = \tilde{P}(g_c^*, g_o^*) - \max_{altri}\tilde{P}(g_c, g_o)\]
 
 ---
 
 ## 🎮 Il Software Desktop (Ottimizzazione Numerica)
 
 L'applicazione (sviluppata in VB6 con Windows API native) agisce come motore di calcolo operando due compiti principali:
-- **Calibrazione Numerica Totale (Tasto F8):** Esegue un ciclo di ottimizzazione stocastica (**Random Search** fino a 2000 iterazioni) simulando i parametri macroscopici del framework sul database storico `Risultati.txt`, minimizzando la funzione di costo basata sulla **Log-Loss** reale del sistema:
+- **Calibrazione Numerica Totale (Tasto F8):** Esegue un ciclo di ottimizzazione stocastica (**Random Search** fino a 2000 interazioni) simulando i parametri macroscopici del framework sul database storico `Risultati.txt`, minimizzando la funzione di costo basata sulla **Log-Loss** reale del sistema:
   \[LL = - \sum \log(P(\text{esito osservato}))\]
 - **UI Dinamica Interamente Custom:** Tabelle e controlli `ListView` vengono gestiti bypassando i limiti di refresh di Windows; l'intero layout è responsive e calcola l'auto-scaling delle proporzioni dei font e delle griglie geometriche in tempo reale durante il resize della finestra.
 
 ---
-*Sviluppato da Massimiliano G.*
+*Sviluppato da Massimiliano Ganzaroli*
