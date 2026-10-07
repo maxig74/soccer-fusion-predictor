@@ -49,4 +49,4 @@ L'applicazione (sviluppata in VB6 con Windows API native) agisce come motore di 
 - **UI Dinamica Interamente Custom:** Tabelle e controlli `ListView` vengono gestiti bypassando i limiti di refresh di Windows; l'intero layout è responsive e calcola l'auto-scaling delle proporzioni dei font e delle griglie geometriche in tempo reale durante il resize della finestra.
 
 ---
-*Sviluppato da Massimiliano Ganzaroli*
+*Sviluppato da Massimiliano G.*
